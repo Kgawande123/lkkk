@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+{% block title %}
+    <title>Success</title>
+{% endblock %}
+{% block content %}
+<div class="container bg-primary p-3 mt-3 w-50">
+<form method="post">
+    {% csrf_token %}
+    <h1> Do You Want Delete<span style="color:red">{{obj.f_name}}</span> Recoord</h1>
+    <input type="submit" value="YES" class="btn btn-danger">
+    <a><button class="btn btn-warning" value="button">No</button></a>
+</form>
+</div>
+
+{% endblock %}
